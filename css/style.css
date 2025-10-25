@@ -279,3 +279,301 @@ span{
 .home{
     color: black;
 }
+
+
+
+/* =============================
+   ✅ BASE VARIABLES & RESET
+============================= */
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* =============================
+   ✅ NAVBAR
+============================= */
+nav {
+  position: absolute;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 40px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.menu ul li {
+  font-size: 18px;
+}
+
+/* =============================
+   ✅ BANNER
+============================= */
+#banner {
+  background: url("../images/banner.jpg") center/cover no-repeat;
+  padding: 200px 0 250px;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 88px;
+  font-weight: 400;
+}
+
+.banner-content span {
+  font-size: 96px;
+  font-weight: 700;
+  display: block;
+}
+
+/* =============================
+   ✅ SECTION 2
+============================= */
+#section2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 150px 0;
+}
+
+#section2 img {
+  width: 100%;
+  height: auto;
+}
+
+.section2-content p {
+  padding-bottom: 40px;
+}
+
+.section2-content a {
+  color: #fbd784;
+  text-transform: uppercase;
+}
+
+/* =============================
+   ✅ SECTION 3
+============================= */
+#section3 {
+  background: url("../images/section3img.png") center/cover no-repeat;
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.section3-content {
+  max-width: 800px;
+  padding: 80px 20px;
+}
+
+/* =============================
+   ✅ SECTION 4
+============================= */
+#section4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 150px 0;
+  flex-wrap: wrap;
+}
+
+#section4 img {
+  width: 100%;
+  height: auto;
+}
+
+.section4-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.group21 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.4s linear;
+}
+
+.section4-main:hover .group21 {
+  top: 0;
+}
+
+/* =============================
+   ✅ SECTION 5
+============================= */
+#section5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.section5-content {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.get {
+  background-color: #ffa343;
+  color: #000;
+  font-size: 17px;
+  padding: 19px 67px;
+  border-radius: 10px;
+}
+
+/* =============================
+   ✅ FOOTER
+============================= */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.lists {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+#section6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.copy {
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+}
+
+
+@media (max-width: var(--breakpoint-sm)) {
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+  }
+
+  .banner-content h1 {
+    font-size: 42px;
+  }
+
+  .banner-content span {
+    font-size: 52px;
+  }
+
+  #section2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #section4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section5 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: var(--breakpoint-md)) {
+  .menu ul {
+    gap: 30px;
+  }
+
+  #section2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section3-content h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: var(--breakpoint-lg)) {
+  #section2,
+  #section4 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+}
+
+
+@media (max-width: var(--breakpoint-xl)) {
+  .container {
+    width: 90%;
+  }
+
+  .menu ul {
+    gap: 40px;
+  }
+}
